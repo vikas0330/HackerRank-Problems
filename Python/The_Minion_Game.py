@@ -44,20 +44,20 @@ Constraints
 
 def minion_game(string):
     # your code goes here
-    n = len(string)
-    comb = ((n)*(n+1))/2
-    count_k = 0
-    count_s = 0
-    count_k = sum([len(string[i:]) for i in range(len(string)) if string[i] in "AEIOU"])
-    count_s = comb - count_k
-    
-    if count_s == count_k:
-        print("Draw")
-    elif count_s > count_k:
-        print("Stuart", int(count_s) )
+    stuart=0
+    kevin=0
+    vowel='AEIOU'
+    for i in range (len(s)):
+        if s[i] not in vowel:
+            stuart+=len(s)-i
+        else:
+            kevin+=len(s)-i
+    if (stuart>kevin):
+        print(f'Stuart {stuart}')
+    elif (stuart<kevin):
+        print(f'Kevin {kevin}')
     else:
-        print("Kevin", int(count_k))
-    
+        print('Draw')  
 
 if __name__ == '__main__':
     s = input()
