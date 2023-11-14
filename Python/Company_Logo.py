@@ -41,7 +41,7 @@ Note: The string S has at least 3 distinct characters.
 '''
 
 #!/bin/python3
-from collections import counter
+from collections import Counter
 import math
 import os
 import random
@@ -52,7 +52,7 @@ import sys
 
 if __name__ == '__main__':
     s = sorted(input())
-    z= counter(s)
-    z= counter(s).most_common(3)
+    z= Counter(s)
+    z= Counter(s).most_common(3)
     for x in z:
         print(*x)
